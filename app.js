@@ -3,7 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const { sequelize } = require('./models');
-// const africasTalking = require('./services/integrateAfricasTalking');
+const africasTalking = require('./services/africasTalkingService');
 
 
 
@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
     res.send("Interacting with safiri platform")
 });
 
-// app.post('/', africasTalking.ussdAccess);
+app.post('/', africasTalking.ussdAccess);
 
 
 sequelize.sync({ alter: true }).then(() => {
