@@ -27,7 +27,7 @@ const messages = {
         `Your FundX wallet has been created successfully! Your wallet address: ${address}`,
     
     transactionSuccess: (txHash, amount, recipient) =>
-        `Transaction successful! Amount: ${amount} STRK. Hash: ${txHash.substring(0, 8)}...\n Recipient: ${recipient}`,
+        `Transaction successful! Amount: ${amount} USDT. Hash: ${txHash.substring(0, 8)}...\n Recipient: ${recipient}`,
     
     transactionFailed: (error) =>
         `Transaction failed. Error: ${error}. Please try again later.`,

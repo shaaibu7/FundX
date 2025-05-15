@@ -11,7 +11,7 @@ function sanitizeName(name) {
 
 async function generateSafiriUsername(fullName) {
     let formatedName = sanitizeName(fullName);
-    let username = `${formatedName}.safiri`;
+    let username = `${formatedName}.fundX`;
     
     const existingUser = await User.findOne({ 
         where: { safiriUsername: username },
@@ -19,7 +19,7 @@ async function generateSafiriUsername(fullName) {
     });
     
     if (existingUser) {
-        return `${formatedName + uuid().slice(0,4)}.safiri`;
+        return `${formatedName + uuid().slice(0,4)}.fundX`;
     }
     
     return username;
